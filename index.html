@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- js -->
+    <script src="./books.js" defer></script>
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <!-- header start -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-header__wrapper">
+                <a class="site-header__logo logo" href="#">
+                    <img class="logo__img" src="./images/book-icon.svg" width="64px" height="64px" alt="Geek out logo">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    
+    <section class="credentials">
+        <div class="container">
+            <div class="credentials__wrapper">
+                <form class="credentials__form site-form" id="searchForm" action="#">
+                    <input class="site-form__input" id="searchInput" type="text" placeholder="search for books">
+                    <select class="site-form__select" name="book_filter" id="filterBooks">
+                        <option value="">Filter by Author</option>
+                    </select>
+                    <select name="book_sort" id="sortBooks">
+                        <option value="pages (ascending)">Sort by pages (ascending)</option>
+                        <option value="pages (descending)">Sort by pages (descending)</option>
+                        <option value="z-a">Z-A</option>
+                        <option value="oldest-latest">Oldest-Latest</option>
+                        <option value="latest-oldest">Latest-Oldest</option>
+                        <option value="a-z">A-Z</option>
+                    </select>
+                    <input class="site-form__input" id="booksFromPeriod" name="books_period_from" type="number" placeholder="From" maxlength="4" min="0">
+                    <input class="site-form__input" id="booksToPeriod" name="books_period_to" type="number" placeholder="To">
+                    <button class="site-form__btn" id="searchBtn">Search</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- movies section start -->
+    <section class="books" id="books">
+        <div class="container">
+            <div class="books__wrapper">
+                <ul class="books__list" id="booksList">
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- movies section end -->
+
+    <!-- template -->
+    <template id="bookTemplate">
+        <li class="book__item book" id="bookItem">
+            <img class="book__img" id="bookImg" src="./images/things-fall-apart.jpg" alt="Anna karenina">
+
+            <h3 class="book__title" id="bookTitle">Things Fall Apart</h3>
+
+            <h4 class="book__author" id="bookAuthor">Chinua Achebe</h4>
+
+            <div class="book__info">
+                <p class="book__year" id="bookYear">1958</p>
+                <p class="book__pages" id="bookPages">209</p>
+                <p class="book__lang" id="bookLang">
+                    English
+                </p>
+            </div>
+
+            <a class="book__wiki" id="bookWiki" href="https://en.wikipedia.org/wiki/Things_Fall_Apart">Wikipedia</a>
+
+        </li>
+    </template>
+</body>
+</html>
