@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./styles.css">
     <!-- js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./books.js" defer></script>
     <script src="./app.js" defer></script>
 </head>
+
 <body>
     <!-- header start -->
     <header class="site-header">
@@ -23,7 +27,7 @@
         </div>
     </header>
     <!-- header end -->
-    
+
     <section class="credentials">
         <div class="container">
             <div class="credentials__wrapper">
@@ -40,8 +44,10 @@
                         <option value="latest-oldest">Latest-Oldest</option>
                         <option value="a-z">A-Z</option>
                     </select>
-                    <input class="site-form__input" id="booksFromPeriod" name="books_period_from" type="number" placeholder="From" maxlength="4" min="0">
-                    <input class="site-form__input" id="booksToPeriod" name="books_period_to" type="number" placeholder="To">
+                    <input class="site-form__input" id="booksFromPeriod" name="books_period_from" type="number"
+                        placeholder="From" maxlength="4" min="0">
+                    <input class="site-form__input" id="booksToPeriod" name="books_period_to" type="number"
+                        placeholder="To">
                     <button class="site-form__btn" id="searchBtn">Search</button>
                 </form>
             </div>
@@ -54,7 +60,7 @@
         <div class="container">
             <div class="books__wrapper">
                 <ul class="books__list" id="booksList">
-                    
+
                 </ul>
             </div>
         </div>
@@ -63,7 +69,7 @@
 
     <!-- template -->
     <template id="bookTemplate">
-        <li class="book__item book" id="bookItem">
+        <li class="book__item book" id="bookItem" data-aos="fade-up" data-aos-duration="2000">
             <img class="book__img" id="bookImg" src="./images/things-fall-apart.jpg" alt="Anna karenina">
 
             <h3 class="book__title" id="bookTitle">Things Fall Apart</h3>
@@ -82,5 +88,10 @@
 
         </li>
     </template>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
